@@ -1,7 +1,7 @@
 #!/bin/bash
 # One-shot setup for ECE 5831 on Great Lakes:
 #   creates the ece-5831-2026 conda env, installs pandapower, registers the Jupyter kernel,
-#   executes every notebook in place and runs python-tutorial-11.py.
+#   executes every notebook in place (Assignment 1 and A_02) and runs python-tutorial-11.py.
 # Usage (from the repo folder):  bash greatlakes_setup.sh
 set -e
 cd "$(dirname "$0")"
@@ -30,11 +30,12 @@ conda activate "$ENV"
 echo "Python: $(which python)"
 
 pip install --upgrade pip
-pip install "pandapower[all]" ipykernel nbconvert nbformat
+pip install "pandapower[all]" numpy ipykernel nbconvert nbformat
 python -m ipykernel install --user --name "$ENV" --display-name "Python ($ENV)"
 
 for nb in ECE5831_lec_1/lec1_example_v1.ipynb learn-python-1.ipynb learn-python-2.ipynb \
-          python-tutorial-1-10.ipynb python-tutorial-12-15.ipynb; do
+          python-tutorial-1-10.ipynb python-tutorial-12-15.ipynb \
+          A_02/numpy-tutorials.ipynb; do
     echo "=== executing $nb"
     jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name="$ENV" "$nb"
 done

@@ -9,6 +9,13 @@
 | `python-tutorial-11.py` | Q3 - pythontutorial.net, Python Basics section 11 |
 | `python-tutorial-12-15.ipynb` | Q3 - pythontutorial.net, Python Basics sections 12-15 |
 
+## Assignment 2 - [`A_02/`](A_02)
+
+| File | Content |
+|---|---|
+| `A_02/numpy-tutorials.ipynb` | cs231n Python NumPy tutorial: NumPy, arrays, array indexing, data types, array math, broadcasting |
+| `A_02/README.md` | Description of the Assignment 2 work |
+
 ## Run on Great Lakes
 
 ```bash
@@ -17,4 +24,4 @@ cd ece5831-2026
 bash greatlakes_setup.sh
 ```
 
-Creates the `ece-5831-2026` conda environment, installs `pandapower[all]`, and executes all notebooks.
+Creates the `ece-5831-2026` conda environment, installs `pandapower[all]` and `numpy`, and executes all notebooks (Assignment 1 and A_02).
