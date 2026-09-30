@@ -1,0 +1,49 @@
+
+============================================================
+1. Unpacking tuples
+============================================================
+x = 10, y = 20
+after swap: x = 20, y = 10
+r = 192, g = 210, other = [100, 0.5]
+merged tuple: (1, 3, 5, 2, 4, 6)
+ValueError: too many values to unpack (expected 2)
+
+============================================================
+2. *args
+============================================================
+args is a tuple (1, 2, 3)
+add(1, 2, 3) = 6
+args is a tuple ()
+add() = 0
+add_with_first(1, 2, 3, 4) = 10
+add_keyword_after(10, 20, z=30) = 60
+unpacking into args: (0, 0)
+
+============================================================
+3. **kwargs
+============================================================
+kwargs is a dict
+  server: localhost
+  port: 3306
+  user: root
+  password: Py1hon!Xt12
+fn=mysql, args=('localhost',), kwargs={'port': 3306, 'user': 'root'}
+kwargs is a dict
+  server: localhost
+  port: 3306
+
+============================================================
+4. Partial functions
+============================================================
+double(10) = 20
+triple(10) = 30
+to_int_base2('1011') = 11
+double.func = multiply keywords = {'b': 2}
+
+============================================================
+5. Type hints
+============================================================
+Hi John
+add_numbers(1, 2.5) = 3.5
+annotations of add_numbers: {'x': typing.Union[int, float], 'y': typing.Union[int, float], 'return': typing.Union[int, float]}
+say_hi(123) still runs: Hi 123
